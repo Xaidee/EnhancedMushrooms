@@ -15,7 +15,9 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.material.MaterialColor;
 
@@ -73,7 +75,29 @@ public class EMBlocks {
 
     public static final Pair<Supplier<PollinatedStandingSignBlock>, Supplier<PollinatedWallSignBlock>> BROWN_MUSHROOM_SIGN = BLOCKS.registerSign("brown_mushroom", Material.WOOD, MaterialColor.DIRT);
 
+    /// Compat Mushroom Woodsets
+    // Darker Depths' Glowshroom Woodset
+    private static final Woodset DD_GLOWSHROOM = new Woodset(MaterialColor.COLOR_ORANGE, MaterialColor.DIRT);
+
+    public static final Supplier<Block> DD_STRIPPED_GLOWSHROOM_STEM = BLOCKS.registerWithItem("dd_stripped_glowshroom_stem", DD_GLOWSHROOM::stripped_log, block -> new TabInsertBlockItem(Blocks.STRIPPED_WARPED_STEM.asItem(), block, new Item.Properties().tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_BUILDING_BLOCKS : null)));
+    public static final Supplier<Block> DD_STRIPPED_GLOWSHROOM_HYPHAE = BLOCKS.registerWithItem("dd_stripped_glowshroom_hyphae", DD_GLOWSHROOM::stripped_wood, block -> new TabInsertBlockItem(Blocks.STRIPPED_WARPED_HYPHAE.asItem(), block, new Item.Properties().tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_BUILDING_BLOCKS : null)));
+    public static final Supplier<Block> DD_GLOWSHROOM_STEM = BLOCKS.registerWithItem("dd_glowshroom_stem", DD_GLOWSHROOM::log, block -> new TabInsertBlockItem(Blocks.WARPED_STEM.asItem(), block, new Item.Properties().tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_BUILDING_BLOCKS : null)));
+    public static final Supplier<Block> DD_GLOWSHROOM_HYPHAE = BLOCKS.registerWithItem("dd_glowshroom_hyphae", DD_GLOWSHROOM::wood, block -> new TabInsertBlockItem(Blocks.WARPED_HYPHAE.asItem(), block, new Item.Properties().tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_BUILDING_BLOCKS : null)));
+
+    public static final Supplier<Block> DD_GLOWSHROOM_PLANKS = BLOCKS.registerWithItem("dd_glowshroom_planks", DD_GLOWSHROOM::planks, block -> new TabInsertBlockItem(Blocks.WARPED_PLANKS.asItem(), block, new Item.Properties().tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_BUILDING_BLOCKS : null)));
+    public static final Supplier<Block> DD_GLOWSHROOM_SLAB = BLOCKS.registerWithItem("dd_glowshroom_slab", DD_GLOWSHROOM::slab, block -> new TabInsertBlockItem(Blocks.WARPED_SLAB.asItem(), block, new Item.Properties().tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_BUILDING_BLOCKS : null)));
+    public static final Supplier<Block> DD_GLOWSHROOM_STAIRS = BLOCKS.registerWithItem("dd_glowshroom_stairs", () -> DD_GLOWSHROOM.stairs(DD_GLOWSHROOM_PLANKS), block -> new TabInsertBlockItem(Blocks.WARPED_STAIRS.asItem(), block, new Item.Properties().tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_BUILDING_BLOCKS : null)));
+    public static final Supplier<Block> DD_GLOWSHROOM_PRESSURE_PLATE = BLOCKS.registerWithItem("dd_glowshroom_pressure_plate", DD_GLOWSHROOM::pressurePlate, block -> new TabInsertBlockItem(Blocks.WARPED_PRESSURE_PLATE.asItem(), block, new Item.Properties().tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_REDSTONE : null)));
+    public static final Supplier<Block> DD_GLOWSHROOM_BUTTON = BLOCKS.registerWithItem("dd_glowshroom_button", DD_GLOWSHROOM::button, block -> new TabInsertBlockItem(Blocks.WARPED_BUTTON.asItem(), block, new Item.Properties().tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_REDSTONE : null)));
+    public static final Supplier<Block> DD_GLOWSHROOM_FENCE = BLOCKS.registerWithItem("dd_glowshroom_fence", DD_GLOWSHROOM::fence, block -> new TabInsertBlockItem(Blocks.WARPED_FENCE.asItem(), block, new Item.Properties().tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_DECORATIONS : null)));
+    public static final Supplier<Block> DD_GLOWSHROOM_FENCE_GATE = BLOCKS.registerWithItem("dd_glowshroom_fence_gate", DD_GLOWSHROOM::fenceGate, block -> new TabInsertBlockItem(Blocks.WARPED_FENCE_GATE.asItem(), block, new Item.Properties().tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_REDSTONE : null)));
+    public static final Supplier<Block> DD_GLOWSHROOM_DOOR = BLOCKS.registerWithItem("dd_glowshroom_door", DD_GLOWSHROOM::door, block -> new TabInsertBlockItem(Blocks.WARPED_DOOR.asItem(), block, new Item.Properties().tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_REDSTONE : null)));
+    public static final Supplier<Block> DD_GLOWSHROOM_TRAPDOOR = BLOCKS.registerWithItem("dd_glowshroom_trapdoor", DD_GLOWSHROOM::trapdoor, block -> new TabInsertBlockItem(Blocks.WARPED_TRAPDOOR.asItem(), block, new Item.Properties().tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_REDSTONE : null)));
+    public static final Supplier<Block> DD_GLOWSHROOM_CABINET = BLOCKS.registerWithItem("dd_glowshroom_cabinet", DD_GLOWSHROOM::cabinet, new Item.Properties().tab(Platform.isModLoaded("farmersdelight") && Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_BUILDING_BLOCKS : null));
+
+    public static final Pair<Supplier<PollinatedStandingSignBlock>, Supplier<PollinatedWallSignBlock>> DD_GLOWSHROOM_SIGN = BLOCKS.registerSign("dd_glowshroom", BlockBehaviour.Properties.of(Material.WOOD, MaterialColor.DIRT).noCollission().strength(1.0F).sound(SoundType.WOOD), new Item.Properties().stacksTo(16).tab(Platform.isModLoaded("darkerdepths") ? CreativeModeTab.TAB_DECORATIONS : null));
+
     // Cabinet Block Entity
 
-    public static final Supplier<BlockEntityType<EMCabinetBlockEntity>> CABINET_BE = BLOCK_ENTITIES.register("cabinet", () -> BlockEntityType.Builder.of(EMCabinetBlockEntity::new, EMBlocks.BROWN_MUSHROOM_CABINET.get(), EMBlocks.RED_MUSHROOM_CABINET.get()).build(null));
+    public static final Supplier<BlockEntityType<EMCabinetBlockEntity>> CABINET_BE = BLOCK_ENTITIES.register("cabinet", () -> BlockEntityType.Builder.of(EMCabinetBlockEntity::new, EMBlocks.BROWN_MUSHROOM_CABINET.get(), EMBlocks.RED_MUSHROOM_CABINET.get(), EMBlocks.DD_GLOWSHROOM_CABINET.get()).build(null));
 }
