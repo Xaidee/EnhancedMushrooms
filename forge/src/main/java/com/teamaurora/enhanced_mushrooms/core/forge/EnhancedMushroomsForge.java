@@ -1,6 +1,7 @@
 package com.teamaurora.enhanced_mushrooms.core.forge;
 
 import com.teamaurora.enhanced_mushrooms.core.EnhancedMushrooms;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 
 /**

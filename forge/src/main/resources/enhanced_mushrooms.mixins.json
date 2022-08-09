@@ -3,9 +3,11 @@
   "package": "com.teamaurora.enhanced_mushrooms.core.mixin.forge",
   "compatibilityLevel": "JAVA_17",
   "minVersion": "0.8",
+  "plugin": "com.teamaurora.enhanced_mushrooms.core.forge.compat.ForgeMixinPlugin",
   "client": [
   ],
   "mixins": [
+    "MixinDDHugeGlowshroomFeature"
   ],
   "injectors": {
     "defaultRequire": 1
