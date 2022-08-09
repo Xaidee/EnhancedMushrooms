@@ -19,4 +19,6 @@ public class EMItems {
     /* Boats */
     public static final Supplier<Item> BROWN_MUSHROOM_BOAT_ITEM = ITEMS.register("brown_mushroom_boat", () -> new PollinatedBoatItem(EMEntities.BROWN_MUSHROOM_BOAT, new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_TRANSPORTATION)));
     public static final Supplier<Item> RED_MUSHROOM_BOAT_ITEM = ITEMS.register("red_mushroom_boat", () -> new PollinatedBoatItem(EMEntities.RED_MUSHROOM_BOAT, new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_TRANSPORTATION)));
+
+    public static final Supplier<Item> DD_GLOWSHROOM_BOAT_ITEM = ITEMS.register("dd_glowshroom_boat", () -> new PollinatedBoatItem(EMEntities.DD_GLOWSHROOM_BOAT, new Item.Properties().stacksTo(1).tab(CreativeModeTab.TAB_TRANSPORTATION)));
 }

@@ -35,6 +35,24 @@
 
   "item.enhanced_mushrooms.brown_mushroom_boat": "Brown Mushroom Boat",
 
+  "_comment3": "Darker Depth's Glowshroom Blocks & Items",
+  "block.enhanced_mushrooms.dd_glowshroom_stem": "Glowshroom Stem",
+  "block.enhanced_mushrooms.dd_stripped_glowshroom_stem": "Stripped Glowshroom Stem",
+  "block.enhanced_mushrooms.dd_glowshroom_hyphae": "Glowshroom Hyphae",
+  "block.enhanced_mushrooms.dd_stripped_glowshroom_hyphae": "Stripped Glowshroom Hyphae",
+  "block.enhanced_mushrooms.dd_glowshroom_planks": "Glowshroom Planks",
+  "block.enhanced_mushrooms.dd_glowshroom_slab": "Glowshroom Slab",
+  "block.enhanced_mushrooms.dd_glowshroom_stairs": "Glowshroom Stairs",
+  "block.enhanced_mushrooms.dd_glowshroom_pressure_plate": "Glowshroom Pressure Plate",
+  "block.enhanced_mushrooms.dd_glowshroom_fence": "Glowshroom Fence",
+  "block.enhanced_mushrooms.dd_glowshroom_fence_gate": "Glowshroom Fence Gate",
+  "block.enhanced_mushrooms.dd_glowshroom_button": "Glowshroom Button",
+  "block.enhanced_mushrooms.dd_glowshroom_trapdoor": "Glowshroom Trapdoor",
+  "block.enhanced_mushrooms.dd_glowshroom_door": "Glowshroom Door",
+  "block.enhanced_mushrooms.dd_glowshroom_sign": "Glowshroom Sign",
+
+  "item.enhanced_mushrooms.dd_glowshroom_boat": "Glowshroom Boat",
+
   "block.quark.mushroom_chest": "Red Mushroom Chest",
   "block.enhanced_mushrooms.brown_mushroom_chest": "Brown Mushroom Chest",
 
@@ -42,8 +60,9 @@
   "block.enhanced_mushrooms.brown_mushroom_trapped_chest": "Brown Mushroom Trapped Chest",
 
 
-  "_comment3": "Farmer's Delight Compat",
+  "_comment4": "Farmer's Delight Compat",
   "enhanced_mushrooms.container.cabinet": "Cabinet",
   "block.enhanced_mushrooms.red_mushroom_cabinet": "Red Mushroom Cabinet",
-  "block.enhanced_mushrooms.brown_mushroom_cabinet": "Brown Mushroom Cabinet"
+  "block.enhanced_mushrooms.brown_mushroom_cabinet": "Brown Mushroom Cabinet",
+  "block.enhanced_mushrooms.dd_glowshroom_cabinet": "Glowshroom Cabinet"
 }
