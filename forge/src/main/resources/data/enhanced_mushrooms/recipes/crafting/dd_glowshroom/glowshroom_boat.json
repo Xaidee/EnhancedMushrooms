@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boat",
+  "pattern": [
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "enhanced_mushrooms:dd_glowshroom_planks"
+    }
+  },
+  "result": {
+    "item": "enhanced_mushrooms:dd_glowshroom_boat"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "darkerdepths"
+    }
+  ]
+}

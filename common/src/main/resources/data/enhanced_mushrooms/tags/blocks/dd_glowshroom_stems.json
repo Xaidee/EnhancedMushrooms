@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "enhanced_mushrooms:dd_glowshroom_stem",
+    "enhanced_mushrooms:dd_glowshroom_hyphae",
+    "enhanced_mushrooms:dd_stripped_glowshroom_stem",
+    "enhanced_mushrooms:dd_stripped_glowshroom_hyphae"
+  ]
+}

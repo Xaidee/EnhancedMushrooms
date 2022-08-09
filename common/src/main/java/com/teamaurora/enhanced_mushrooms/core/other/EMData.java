@@ -30,6 +30,17 @@ public class EMData {
             FlammabilityRegistry.register(EMBlocks.BROWN_MUSHROOM_STAIRS.get(), 5, 20);
             FlammabilityRegistry.register(EMBlocks.BROWN_MUSHROOM_FENCE.get(), 5, 20);
             FlammabilityRegistry.register(EMBlocks.BROWN_MUSHROOM_FENCE_GATE.get(), 5, 20);
+
+            // Darker Depth's Glowshrooms
+            FlammabilityRegistry.register(EMBlocks.DD_GLOWSHROOM_STEM.get(), 5, 5);
+            FlammabilityRegistry.register(EMBlocks.DD_GLOWSHROOM_HYPHAE.get(), 5, 5);
+            FlammabilityRegistry.register(EMBlocks.DD_STRIPPED_GLOWSHROOM_STEM.get(), 5, 5);
+            FlammabilityRegistry.register(EMBlocks.DD_STRIPPED_GLOWSHROOM_HYPHAE.get(), 5, 5);
+            FlammabilityRegistry.register(EMBlocks.DD_GLOWSHROOM_PLANKS.get(), 5, 20);
+            FlammabilityRegistry.register(EMBlocks.DD_GLOWSHROOM_SLAB.get(), 5, 20);
+            FlammabilityRegistry.register(EMBlocks.DD_GLOWSHROOM_STAIRS.get(), 5, 20);
+            FlammabilityRegistry.register(EMBlocks.DD_GLOWSHROOM_FENCE.get(), 5, 20);
+            FlammabilityRegistry.register(EMBlocks.DD_GLOWSHROOM_FENCE_GATE.get(), 5, 20);
     }
 
     public static void registerStrippables() {
@@ -37,5 +48,8 @@ public class EMData {
             StrippingRegistry.register(EMBlocks.BROWN_MUSHROOM_STEM.get(), EMBlocks.STRIPPED_BROWN_MUSHROOM_STEM.get());
             StrippingRegistry.register(EMBlocks.RED_MUSHROOM_HYPHAE.get(), EMBlocks.STRIPPED_RED_MUSHROOM_HYPHAE.get());
             StrippingRegistry.register(EMBlocks.BROWN_MUSHROOM_HYPHAE.get(), EMBlocks.STRIPPED_BROWN_MUSHROOM_HYPHAE.get());
+
+            StrippingRegistry.register(EMBlocks.DD_GLOWSHROOM_STEM.get(), EMBlocks.DD_STRIPPED_GLOWSHROOM_STEM.get());
+            StrippingRegistry.register(EMBlocks.DD_GLOWSHROOM_HYPHAE.get(), EMBlocks.DD_STRIPPED_GLOWSHROOM_HYPHAE.get());
     }
 }
