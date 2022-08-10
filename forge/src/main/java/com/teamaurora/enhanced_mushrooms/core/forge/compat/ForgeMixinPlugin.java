@@ -1,8 +1,5 @@
 package com.teamaurora.enhanced_mushrooms.core.forge.compat;
 
-import com.naterbobber.darkerdepths.DarkerDepths;
-import net.minecraftforge.common.ForgeMod;
-import net.minecraftforge.fml.ModList;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
