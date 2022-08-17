@@ -58,7 +58,13 @@ dependencies {
 
     modApi("gg.moonflower:pollen-forge:${rootProject.pollen_version}")
 
-    modImplementation "curse.maven:darker-depths-460681:3888100"
+
+    // Compat mods
+    modCompileOnly "curse.maven:darker-depths-460681:3879776" // Darker Depths
+    modCompileOnly "curse.maven:darker-depths-460681:3879776" // Comment this line to test if mod loads correctly when Darker Depths isn't installed
+    modCompileOnly "curse.maven:biomesoplenty-220318:3827434"
+    modRuntimeOnly "curse.maven:biomesoplenty-220318:3827434" // Comment this line to test if mod loads correctly when BOP isn't installed
+    modRuntimeOnly "curse.maven:terrablender-563928:3816497" // Required by Biomes O' Plenty
 
     modRuntimeOnly "me.djtheredstoner:DevAuth-forge-latest:${rootProject.devauth_version}"
     modRuntimeOnly "curse.maven:configured-457570:3640884"
